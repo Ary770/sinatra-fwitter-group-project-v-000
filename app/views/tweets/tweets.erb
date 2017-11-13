@@ -3,6 +3,6 @@
   <h2>Tweets</h2>
 
   <% @tweets.each_with_index do |t, i| %>
-    <h3>Tweet No.<%= i %></h3>
+    <h3>Tweet No.<%= 1 + i %></h3>
     <p><%= t.content %></p>
   <% end %>
