@@ -62,7 +62,7 @@ class TweetController < ApplicationController
     tweet = Tweet.find(params[:id])
     tweet.content = params[:content]
     tweet.save
-
+    binding.pry
     redirect "/tweets/#{tweet.id}"
   end
 
