@@ -1,6 +1,5 @@
 <h1><%=@user.username%> Tweets</h1>
 
-  <h2>Your Tweets</h2>
 <% @user.tweets.each_with_index do |t, i| %>
   <h3>Tweet No.<%= 1 + i %></h3>
   <p><%= t.content %></p>
