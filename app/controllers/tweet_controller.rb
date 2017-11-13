@@ -59,10 +59,10 @@ class TweetController < ApplicationController
   end
 
   post '/tweets/:id' do
+    <input type="hidden" name="_method" id="hidden" value="patch">
     tweet = Tweet.find(params[:id])
     tweet.content = params[:content]
     tweet.save
-    binding.pry
     redirect "/tweets/#{tweet.id}"
   end
 
