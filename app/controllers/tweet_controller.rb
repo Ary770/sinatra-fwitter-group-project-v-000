@@ -58,7 +58,7 @@ class TweetController < ApplicationController
     end
   end
 
-  patch '/tweets/:id' do
+  post '/tweets/:id' do
     tweet = Tweet.find(params[:id])
     tweet.content = params[:content]
     tweet.save
