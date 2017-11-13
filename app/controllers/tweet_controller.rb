@@ -59,6 +59,7 @@ class TweetController < ApplicationController
   end
 
   patch '/tweets/:id' do
+    if params[:content] == ""
     tweet = Tweet.find(params[:id])
     tweet.content = params[:content]
     tweet.save
