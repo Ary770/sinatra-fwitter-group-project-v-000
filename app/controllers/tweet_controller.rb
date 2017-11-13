@@ -58,8 +58,8 @@ class TweetController < ApplicationController
     end
   end
 
-  post '/tweets/:id' do
-    <input type="hidden" name="_method" id="hidden" value="patch">
+  patch '/tweets/:id' do
+    
     tweet = Tweet.find(params[:id])
     tweet.content = params[:content]
     tweet.save
