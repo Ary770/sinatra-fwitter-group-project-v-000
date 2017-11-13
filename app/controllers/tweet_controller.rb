@@ -59,7 +59,7 @@ class TweetController < ApplicationController
   end
 
   patch '/tweets/:id' do
-    
+
     tweet = Tweet.find(params[:id])
     tweet.content = params[:content]
     tweet.save
