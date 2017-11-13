@@ -49,8 +49,8 @@ class TweetController < ApplicationController
     if user.tweets.include?(tweet)
       tweet.delete
       redirect '/tweets'
-    else 
-
+    else
+      redirect "/tweets/#{tweet.id}"
     end
   end
 
