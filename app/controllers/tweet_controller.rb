@@ -11,7 +11,7 @@ class TweetController < ApplicationController
     end
   end
 
-  get '/tweets/new' do 
+  get '/tweets/new' do
     if logged_in?
       erb :'tweets/create_tweet'
     else
@@ -63,7 +63,7 @@ class TweetController < ApplicationController
     tweet = Tweet.find(params[:id])
     tweet.content = params[:content]
     tweet.save
-    
+
     redirect "/tweets/#{tweet.id}"
   end
 
